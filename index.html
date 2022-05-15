@@ -6,54 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bulb</title>
-    <script>
-        function turnOn(){
-            document.getElementById("bulb").src = "https://www.w3schools.com/js/pic_bulbon.gif";
-        }
-        function turnOff(){
-            document.getElementById("bulb").src = "https://www.w3schools.com/js/pic_bulboff.gif";
-        }
-
-
-        // for 1st method
-        var count = 1;
-        // for 2nd method
-        var bulbValue = false;
-        function button() {
-            // 1st method
-
-            // if (count % 2 != 0) {
-            //     document.getElementById("bulb-1").src = "https://www.w3schools.com/js/pic_bulbon.gif";
-            //     count++;
-            // }
-            // else {
-            //     document.getElementById("bulb-1").src = "https://www.w3schools.com/js/pic_bulboff.gif";
-            //     count++;
-            // }
-
-            // 2nd method
-
-            if(bulbValue){
-                document.getElementById("bulb-1").src = "https://www.w3schools.com/js/pic_bulboff.gif";
-                bulbValue = false;
-            }
-            else {
-                document.getElementById("bulb-1").src = "https://www.w3schools.com/js/pic_bulbon.gif";
-                bulbValue = true;
-            }
-        }
-
-    </script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
-    <div>
+    <div class="div1">
         <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
         <br>
         <button onclick="turnOn()">Turn on</button>
         <button onclick="turnOff()">Turn off</button>
     </div>
-    <div>
+    <div class="div2">
         <img id="bulb-1" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="">
         <br>
         <button onclick="button()">Button</button>
