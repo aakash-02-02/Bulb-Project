@@ -1,35 +1,22 @@
-function turnOn() {
-    document.getElementById("bulb").src = "https://www.w3schools.com/js/pic_bulbon.gif";
+function bulbOn(){
+    let obj = document.querySelector(".bulboff");
+    obj.setAttribute("src","bulbon.png")
 }
-function turnOff() {
-    document.getElementById("bulb").src = "https://www.w3schools.com/js/pic_bulboff.gif";
+function bulbOff(){
+    let obj = document.querySelector(".bulboff");
+    obj.setAttribute("src","offbulb.png");
 }
 
-
-function button() {
-    // 1st method
-
-    var count = 1;
-
-    if (count % 2 != 0) {
-        document.getElementById("bulb-1").src = "https://www.w3schools.com/js/pic_bulbon.gif";
-        count++;
-    }
-    else {
-        document.getElementById("bulb-1").src = "https://www.w3schools.com/js/pic_bulboff.gif";
-        count++;
-    }
-
-    // 2nd method
-
-    var bulbValue = false;
-
-    if (bulbValue) {
-        document.getElementById("bulb-1").src = "https://www.w3schools.com/js/pic_bulboff.gif";
-        bulbValue = false;
-    }
-    else {
-        document.getElementById("bulb-1").src = "https://www.w3schools.com/js/pic_bulbon.gif";
-        bulbValue = true;
-    }
+var c = 0;
+function fu(){
+  if(c==0){
+    document.getElementById('img').src = "bulbon.png";
+    document.getElementById("button").innerHTML = "Turn OFF";
+    c=1;
+  }
+  else if(c==1){
+    document.getElementById("img").src = "offbulb.png";
+    document.getElementById("button").innerHTML = "Turn ON";
+    c=0;
+  }
 }
