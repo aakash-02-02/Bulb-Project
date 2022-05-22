@@ -1,22 +1,25 @@
-function bulbOn(){
-    let obj = document.querySelector(".bulboff");
-    obj.setAttribute("src","bulbon.png")
+// 1st part
+function bulbOn() {
+  document.querySelector(".bulboff").src = "bulbon.png";
 }
-function bulbOff(){
-    let obj = document.querySelector(".bulboff");
-    obj.setAttribute("src","offbulb.png");
+function bulbOff() {
+  document.querySelector(".bulboff").src = "offbulb.png";
 }
 
-var c = 0;
-function fu(){
-  if(c==0){
+// 2nd Part
+
+var bulbStatus = true;
+
+function bulb_On_Off() {
+
+  if (bulbStatus) {
     document.getElementById('img').src = "bulbon.png";
     document.getElementById("button").innerHTML = "Turn OFF";
-    c=1;
+    bulbStatus = false;
   }
-  else if(c==1){
+  else {
     document.getElementById("img").src = "offbulb.png";
     document.getElementById("button").innerHTML = "Turn ON";
-    c=0;
+    bulbStatus = true;
   }
 }
